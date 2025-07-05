@@ -1,0 +1,33 @@
+<p>add-exam works!</p>
+<div class="container">
+  <h2>Liste des Examens</h2>
+
+  <table border="1" width="100%">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Responsable</th>
+        <th>Coefficient</th>
+        <th>Session</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let exam of listresidenceDataBase">
+        <td>{{ exam.id }}</td>
+        <td>{{ exam.responsable }}</td>
+        <td>{{ exam.coeff }}</td>
+        <td>{{ exam.session }}</td>
+        <td>
+          <button (click)="supprime(exam.id)"> Supprimer</button>
+          <button (click)="modifier(exam.id)">Modifier</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+ 
+
+
+
