@@ -23,9 +23,7 @@
           <button (click)="modifier(exam)">Modifier</button> 
 
 
-<button type="submit">
-  {{ isEditing ? 'Mettre à jour' : 'Ajouter' }}
-</button>
+
 
 <button *ngIf="isEditing" type="button" (click)="cancelEdit()">
   Annuler
