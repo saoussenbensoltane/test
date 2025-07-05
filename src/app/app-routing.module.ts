@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ExamComponent } from './exam/exam.component';
 import { AddExamComponent } from './add-exam/add-exam.component';
+import{HttpClientModule} from '@angular/common/http'
+
 const routes: Routes = [
 
   {path:"",redirectTo:"exam",pathMatch:'full'},

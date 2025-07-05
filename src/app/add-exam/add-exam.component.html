@@ -1,4 +1,4 @@
-<p>add-exam works!</p>
+
 <div class="container">
   <h2>Liste des Examens</h2>
 
@@ -20,7 +20,16 @@
         <td>{{ exam.session }}</td>
         <td>
           <button (click)="supprime(exam.id)"> Supprimer</button>
-          <button (click)="modifier(exam.id)">Modifier</button>
+          <button (click)="modifier(exam)">Modifier</button> 
+
+
+<button type="submit">
+  {{ isEditing ? 'Mettre à jour' : 'Ajouter' }}
+</button>
+
+<button *ngIf="isEditing" type="button" (click)="cancelEdit()">
+  Annuler
+</button>
         </td>
       </tr>
     </tbody>

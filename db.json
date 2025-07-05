@@ -1,0 +1,32 @@
+{
+  "exam": [
+    {
+      "id": "7",
+      "Responsable": "ffff",
+      "coeff": "18",
+      "session": "rrrrrr"
+    },
+    {
+      "id": "7",
+      "Responsable": "ffff",
+      "coeff": "18",
+      "session": "rrrrrr"
+    }
+  ],
+  "exam2": [
+    {
+      "id": "2",
+      "responsable": "tesssssssssssssssssssst",
+      "coeff": 2,
+      "session": "disp"
+    }
+  ],
+  "exam3": [
+    {
+      "id": "3",
+      "responsable": " test",
+      "coeff": 2,
+      "session": "disponible"
+    }
+  ]
+}

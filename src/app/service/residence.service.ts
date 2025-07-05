@@ -25,20 +25,20 @@ let n=0
   
 
 getallExam():Observable<Exam[]>{
-  return this.http.get<Exam[]>("http://localhost:4200/Exam/")
+  return this.http.get<Exam[]>("http://localhost:3000/exam/")
 }
 deleteExam(id:any):Observable<Exam>{
-  return this.http.delete<Exam>("http://localhost:4200/Addexam/"+id)
+  return this.http.delete<Exam>("http://localhost:3000/exam/"+id)
 }
 addexam(res:Exam):Observable<Exam[]>{
-  return this.http.post<Exam[]>("http://localhost:4200/Exam/",res)
+  return this.http.post<Exam[]>("http://localhost:3000/Exam/",res)
 }
 
 getbyresidence(id:any):Observable<Exam>{
-  return this.http.get<Exam>("http://localhost:4200/Exam/"+id)
+  return this.http.get<Exam>("http://localhost:3000/exam/"+id)
 }
 getbyproduct(id:any):Observable<Exam>{
-  return this.http.get<Exam>("http://localhost:4200/Exam/"+id)
+  return this.http.get<Exam>("http://localhost:3000/exam/"+id)
 }
 
 
