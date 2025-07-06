@@ -1,12 +1,25 @@
-
 <div class="container">
-  <h2>Liste des Examens</h2>
+  <h2>{{ idupdate ? 'Modifier Examen' : 'Modifier Examen' }}</h2>
 
+  <form [formGroup]="addF" (ngSubmit)="Update()">
+    <label>Responsable</label>
+    <input type="text" formControlName="responsable" /><br />
+
+    <label>Coefficient</label>
+    <input type="number" formControlName="coeff" /><br />
+
+    <label>Session</label>
+    <input type="text" formControlName="session" /><br />
+
+<button type="submit">Modifier</button>
+  </form>
+
+  <h2>Liste des Examens</h2>
   <table border="1" width="100%">
     <thead>
       <tr>
         <th>ID</th>
-        <th>Responsable</th>
+        <th>responsable</th>
         <th>Coefficient</th>
         <th>Session</th>
         <th>Actions</th>
@@ -19,24 +32,10 @@
         <td>{{ exam.coeff }}</td>
         <td>{{ exam.session }}</td>
         <td>
-          <button (click)="supprime(exam.id)"> Supprimer</button>
-          <button (click)="modifier(exam)">Modifier</button> 
-
-
-<button type="submit">
-  {{ isEditing ? 'Mettre à jour' : 'Ajouter' }}
-</button>
-
-<button *ngIf="isEditing" type="button" (click)="cancelEdit()">
-  Annuler
-</button>
+          <button (click)="deleteExam(exam.id)">Supprimer</button>
+          <button (click)="modifier(exam)">Modifier</button>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
-
- 
-
-
-

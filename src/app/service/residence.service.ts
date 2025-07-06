@@ -31,19 +31,15 @@ deleteExam(id:any):Observable<Exam>{
   return this.http.delete<Exam>("http://localhost:3000/exam/"+id)
 }
 addexam(res:Exam):Observable<Exam[]>{
-  return this.http.post<Exam[]>("http://localhost:3000/Exam/",res)
+  return this.http.post<Exam[]>("http://localhost:3000/exam/",res)
 }
 
-getbyresidence(id:any):Observable<Exam>{
+getbyexam(id:any):Observable<Exam>{
   return this.http.get<Exam>("http://localhost:3000/exam/"+id)
 }
 getbyproduct(id:any):Observable<Exam>{
   return this.http.get<Exam>("http://localhost:3000/exam/"+id)
 }
-
-
-
-
 
 updateexam(id:any,res:Exam):Observable<Exam[]>{
   return this.http.put<Exam[]>("http://localhost:3000/exam/"+id,res)

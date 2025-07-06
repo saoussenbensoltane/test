@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:"home" ,component:HomeComponent},
        {path:"Exam" ,component:ExamComponent},
        {path:"AjouterExam" ,component:AddExamComponent},
-       //{ path: 'update-exam/:id', component: A }
+      { path: 'update-exam/:id', component: AddExamComponent }
        
 
 
